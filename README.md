@@ -23,7 +23,7 @@ Edit these settings in `influxdb_config.json`
 - name (this is the name of the InfluxDB database)
 
 
-Edit `vm_template.json` (this is for Grafana)
+Edit `grafana_vm_template.json` (this is for Grafana)
 
 - replace `vfc-IDNUM-GUEST` with the cache name, as returned by this command: `esxcli storage vflash cache list`
 - replace `VMNAME` with the VM name
@@ -47,7 +47,7 @@ SELECT count(MeandiskIOlatencyinmicroseconds) FROM XXX WHERE ("namespace" = 'Rea
 
 - This should return a count result greater than 0
 - Edit your Granfana's InfluxDB data source
-- Import your edited `vm_template.json` file into your Grafana instance
+- Import your edited `grafana_vm_template.json` file into your Grafana instance
 - Once configured, you should be able to see results in Grafana
 - Example graphs: https://raw.githubusercontent.com/jftuga/flash_read_cache_stats/master/grafana_example.png
 
