@@ -84,7 +84,7 @@ ____
 
 ESX <-> PowerCLI mappings
 
-| esxcli                                     | PowerCLI                           | Example Value | 
+| esxcli output                              | PowerCLI                           | Example Value | 
 |--------------------------------------------|------------------------------------|---------------| 
 | Cache hit rate (as a percentage)           | Cachehitrateasapercentage          | 16            | 
 | Max observed I/O latency (in microseconds) | MaxobservedIOlatencyinmicroseconds | 4154          | 
