@@ -12,7 +12,7 @@ _____
 
 Edit these settings in `flash_cache_stats.ps1`
 
-- $vcenter_serve
+- $vcenter_server
 - $run_interval
 - $influxdb_measurement
 
@@ -25,7 +25,7 @@ Edit these settings in `influxdb_config.json`
 
 Edit `vm_template.json` (this is for Grafana)
 
-- replace `vfc-IDNUM-GUEST` with the cache name, as return by this command: `esxcli storage vflash cache list`
+- replace `vfc-IDNUM-GUEST` with the cache name, as returned by this command: `esxcli storage vflash cache list`
 - replace `VMNAME` with the VM name
 - replace `INFLUXMEASUREMENT` with the name of your influxdb measurement table, eg: `$influxdb_measurement`
 
@@ -80,3 +80,24 @@ Example CLI output:
 
 - The InfluxDB measurement is structured in 3 namespaces: `Read, Evict and Global`.  The last 4 stats in the example output is saved in the `Global` namespace.
 
+____
+
+ESX <-> PowerCLI mappings
+
+```csv
+esxcli,PowerCLI,Example Value
+Cache hit rate (as a percentage),Cachehitrateasapercentage,16
+Max observed I/O latency (in microseconds),MaxobservedIOlatencyinmicroseconds,4154
+Max observed IOPS,MaxobservedIOPS,332
+Max observed number of KB per I/O,MaxobservednumberofKBperIO,7521
+Mean I/O latency (in microseconds),MeanIOlatencyinmicroseconds,3511
+Mean IOPS,MeanIOPS,284
+Mean cache I/O latency (in microseconds),MeancacheIOlatencyinmicroseconds,111
+Mean disk I/O latency (in microseconds),MeandiskIOlatencyinmicroseconds,8278
+Mean number of KB per I/O,MeannumberofKBperIO,427
+Total I/Os,TotalIOs,71525
+Total cache I/Os,TotalcacheIOs,11258
+(TotalIOs - TotalcacheIOs),TotaldiskIOs,60267
+Cache usage rate (as a percentage),Cacheusagerateasapercentage,7
+Mean number of cache blocks in use,Meannumberofcacheblocksinuse,89807
+```
