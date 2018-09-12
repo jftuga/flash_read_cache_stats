@@ -101,3 +101,9 @@ ESX <-> PowerCLI mappings
 | (TotalIOs - TotalcacheIOs)                 | TotaldiskIOs                       | 60267         | 
 | Cache usage rate (as a percentage)         | Cacheusagerateasapercentage        | 7             | 
 | Mean number of cache blocks in use         | Meannumberofcacheblocksinuse       | 89807         | 
+
+____
+
+Example Graphs:
+
+![Flash Read Cache Stats Graphs](https://raw.githubusercontent.com/jftuga/flash_read_cache_stats/master/grafana_example.png)
