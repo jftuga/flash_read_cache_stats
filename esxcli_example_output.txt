@@ -1,0 +1,21 @@
+   [root@esx1:~] esxcli storage vflash cache stats get -c vfc-3111222333-SVRFILE02 
+   Read:
+         Cache hit rate (as a percentage): 12
+         Total cache I/Os: 167190
+         Mean cache I/O latency (in microseconds): 307
+         Mean disk I/O latency (in microseconds): 12248
+         Total I/Os: 1436803
+         Mean IOPS: 183
+         Max observed IOPS: 212
+         Mean number of KB per I/O: 170
+         Max observed number of KB per I/O: 9842
+         Mean I/O latency (in microseconds): 5455
+         Max observed I/O latency (in microseconds): 7078
+   Evict:
+         Last I/O operation time (in microseconds): 0
+         Number of I/O blocks in last operation: 0
+         Mean blocks per I/O operation: 0
+   Cache usage rate (as a percentage): 11
+   Total failed SSD I/Os: 0
+   Total failed disk I/Os: 0
+   Mean number of cache blocks in use: 1068360
