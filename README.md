@@ -33,6 +33,7 @@ _____
 
 # To get started
 
+- Install the VMware PowerCLI by running: `Install-Module -Name VMware.PowerCLI`
 - Run `flash_cache_stats.ps1` for about 10 minutes in order to get data into influxdb
 - Verify that results are being saved into the database:
 
